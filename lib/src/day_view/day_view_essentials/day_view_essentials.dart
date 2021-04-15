@@ -25,8 +25,7 @@ class DayViewEssentials extends StatefulWidget {
   State createState() => new DayViewEssentialsState();
 
   static DayViewEssentialsState of(BuildContext context) {
-    _DayViewEssentialsInherited inherited =
-        _DayViewEssentialsInherited.of(context);
+    _DayViewEssentialsInherited inherited = _DayViewEssentialsInherited.of(context);
 
     return inherited?.dayViewEssentialsState;
   }
@@ -90,6 +89,6 @@ class _DayViewEssentialsInherited extends InheritedWidget {
   }
 
   static _DayViewEssentialsInherited of(BuildContext context) {
-    return context.inheritFromWidgetOfExactType(_DayViewEssentialsInherited);
+    return context.dependOnInheritedWidgetOfExactType<_DayViewEssentialsInherited>();
   }
 }
